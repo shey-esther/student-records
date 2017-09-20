@@ -1,0 +1,15 @@
+/* estilos */
+/* resultados */
+body{
+    text-align: center;
+}
+#mostrar{
+    background-color: pink;
+    width: 50%;
+    margin-left: 25%;
+    text-align: left;   
+}
+ h5{
+     padding-left: 15px;
+     padding-right: 15px;
+ }
