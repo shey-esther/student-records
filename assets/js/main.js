@@ -19,8 +19,11 @@ $('#students').click(function () {//al hacer click obtenemos datos con el prompt
   }
 });
 
-$('#imprimir').click( function (){
-    arrayDatos.map(function(x) {
+
+$('#imprimir').click(()=>imprimir(arrayDatos));
+function imprimir (array){
+    array.map(function(x) {
+      // $('#mostrar').empty();
       $('#mostrar').append(
         `<h5>Nombre :${x.nombre}</h5>\
          <h5>% Tecnico :${x.porcentaje}</h5>\
@@ -28,8 +31,15 @@ $('#imprimir').click( function (){
          <hr>
       `);
    });
-});
+}
 
+
+$('#porcentBajos').click( function (){
+ var resslt = arrayDatos.filter(function (menores) {
+  return menores.porcentaje >= 80;
+  });
+  console.log(resslt);
+});
 
 
 
