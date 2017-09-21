@@ -15,6 +15,8 @@ const app = {
 
     setup : function () {
         $('#students').click(app.agregar);
+        
+        $('#imprimir').click(() => app.imprimir(app.item.arrayDatos));
     },
 
     agregar :  function () {
@@ -32,8 +34,20 @@ const app = {
               <hr>
           `);
         } 
-    }  
+    },
+
+    imprimir : function (array) {
+        array.map(x => {
+          // $('#mostrar').empty();
+          $('#mostrar').append(
+            `<h5>Nombre :${x.nombre}</h5>\
+               <h5>Puntaje Tecnico :${x.porcentaje}</h5>\
+               <h5>HSE :${x.hse}</h5>\
+               <hr>
+            `);
+        });
+    } 
 }
 $(document).ready(app.init);
 
-console.log(app.item.arrayDatos);
+// console.log(app.item.arrayDatos);
