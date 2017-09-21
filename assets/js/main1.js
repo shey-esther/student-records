@@ -15,10 +15,12 @@ const app = {
 
     setup : function () {
         $('#students').click(app.agregar);
-        
         $('#imprimir').click(() => app.imprimir(app.item.arrayDatos));
+        $('#porcentAltos').click(app.altoPorcentaje);
+        $('#porcentBajos').click(app.bajoPorcentaje);
     },
 
+    //funcion que agrega e ingresa los datos de los estudiantes.
     agregar :  function () {
         var nombre = prompt("Dime tu Nombre");
         var porcentaje = prompt("Punto Tecnico");
@@ -36,6 +38,7 @@ const app = {
         } 
     },
 
+    //funcion que me muestra el arrayDatos con posiciones recorridas con metodo 'map'.
     imprimir : function (array) {
         array.map(x => {
           // $('#mostrar').empty();
@@ -46,7 +49,25 @@ const app = {
                <hr>
             `);
         });
-    } 
+    },
+
+    // funcion que inprimira los porcentajes mayores del 70 %.
+    altoPorcentaje : function () {
+        $('#mostrar').empty();
+        var resslt = app.item.arrayDatos.filter(function (menores) {
+        return menores.porcentaje > 70;
+        });
+        app.imprimir(resslt);
+    },
+
+    // funcion que imprimira los porcentajes menores del 70%.
+    bajoPorcentaje : function () {
+        $('#porcentBajos').empty();
+        var resslt = app.item.arrayDatos.filter(function (menores) {
+        return menores.porcentaje <= 70;
+        });
+        app.imprimir(resslt);
+    },
 }
 $(document).ready(app.init);
 
