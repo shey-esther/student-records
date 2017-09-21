@@ -4,8 +4,8 @@ var arrayDatos = [];//retorna los datos que son ingresados.
 
 function productos(nombre, porcentaje, hse) {
   this.nombre = nombre,
-    this.porcentaje = porcentaje,
-    this.hse = hse
+  this.porcentaje = porcentaje,
+  this.hse = hse
 };
 
 $('#students').click(function () {//al hacer click obtenemos datos con el prompt
