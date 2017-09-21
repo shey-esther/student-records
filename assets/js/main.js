@@ -27,6 +27,7 @@ $('#students').click(function () {//al hacer click obtenemos datos con el prompt
 
 //funcion que me muestra el arrayDatos con posiciones recorridas con metodo 'map'.
 $('#imprimir').click(() => imprimir(arrayDatos));
+
 function imprimir(array) {
   array.map(function (x) {
     // $('#mostrar').empty();

@@ -1,14 +1,36 @@
 /* estilos */
 /* resultados */
 body{
+    padding-top: 10%;
+    height: 500px;
+    background-color: rgb(237, 238, 240);
+    background-image: url(../img/fondo3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
 }
 #mostrar {
-    background-color: pink;
+    background-color: rgba(66, 12, 62, 0.7);
     margin: 5%;
     text-align: left;
+    border-radius: 5%;
+    color: floralwhite;
 }
+
+h2 {
+    font-weight: 900;
+    font-size: 30px;
+}
+
  h5{
+    font-weight: 900;
      padding-left: 15px;
      padding-right: 15px;
+ }
+
+ button{
+     margin: 2%;
+ }
+ button:hover {
+    background-color: white;
  }
